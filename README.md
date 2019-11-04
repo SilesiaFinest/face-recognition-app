@@ -1,6 +1,8 @@
-Face Recognition App done in React.js
-###
+# Smart Brain
 
+### Face Recognition App done in React.js
+
+Using *tachyons* for styling
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
