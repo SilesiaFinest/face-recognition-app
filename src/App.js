@@ -61,6 +61,14 @@ class App extends Component {
       isSignedIn: false
     }
   }
+
+  // this was only to check back and front-end connetion
+  // componentDidMount() {
+  //   fetch('http://localhost:3000/')
+  //     .then(response => response.json())
+  //     .then(console.log)  // this is the same as .then(data => console.log(data))
+  // }
+
 // this will calculate
   calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
