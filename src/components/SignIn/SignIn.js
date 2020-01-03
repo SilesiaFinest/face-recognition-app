@@ -17,7 +17,7 @@ class SignIn extends Component {
   }
   onSubmitSignIn = (event) => {
     event.preventDefault()
-    fetch('http://localhost:3000/signin', {
+    fetch('https://hidden-spire-02638.herokuapp.com/signin', {
       method:  'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -26,9 +26,13 @@ class SignIn extends Component {
       })
     })
       .then(response => response.json())
-      .then(data => {
-        if (data === 'success') {
+      .then(user => {
+        if(user.id){
+          this.props.loadUser(user);
           this.props.onRouteChange('home');
+        } else {
+          // to be changed for a rendered msg
+          alert('Wrong credentials');
         }
       })
   }
